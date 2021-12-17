@@ -40,7 +40,7 @@ pkg install python
 pkg install python2
 pkg install bash
 pkg install git
-pip install request
+pip install requests
 pip install bs4
 git clone https://github.com/Sanz-Tzy/Sanz
 ```
