@@ -204,7 +204,7 @@ def menu():
     	fbbaru()
         atursandi()
     elif asw == "6":
-    	seting_yntkts()
+    	useragent()
     elif asw == "7":
 	cekhasil()
     elif asw == "8":
@@ -540,7 +540,7 @@ def cek_game(cookie):
 			print("   %s%s. %s%s"%(H,i+1,game[i].replace("Ditambahkan pada",""),N))
 
 ###GANTI USER AGENT###
-def seting_yntkts():
+def useragent():
     print('%s \x1b[1;92m║'%(O))
     print ' ╠══%s1%s \x1b[1;93mganti user agent'%(O,N)
     print ' ╠══%s2%s \x1b[1;93mcheck user agent'%(O,N)
