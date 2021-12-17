@@ -51,3 +51,8 @@ git clone https://github.com/Sanz-Tzy/Sanz
 cd Sanz
 git pull
 python2 Sanz.py
+
+★ **Token FB** ★
+>
+```
+EAAGNO4a7r2wBAECjGSQpkI8v0M9a2obdQUEDqL1aIg8NhuFojTkqt49H5QTefIgrwNQU5Q63uOxYNhpZCZBlkOxdwBnxqZALzZBd1PRgKOLDfF2eP0aCJqzYL5XfCEmLEC40ZClnQaWtkN5Rt4dPZC41frAzoGMZCbFM74Ukneu1CPTOyrCKO4eKVxXOVKZCZBHoZD
