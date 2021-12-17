@@ -1,4 +1,12 @@
-
+<h1 align="center">
+  SANZ
+</h1>
+</div>
+<p align="center">
+  Made with 🌟 by <a href="https://www.facebook.com/bintangt.zy.92">Sanz-Tzy</a>
+</p>
+<p align="center">
+ 
 ★ Method Login ★
 >
 1. Token
