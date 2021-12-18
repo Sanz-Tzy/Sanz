@@ -503,7 +503,6 @@ def cek_opsi(user,pw):
 	else:
 		loop+=2
 		print(" [!] Account terkena Sesi/CheckPoint")
-                print("
 
 def ubah_pw(user,pw,session,response,link2):
 	dat,dat2={},{}
