@@ -209,7 +209,7 @@ def menu():
     elif asw == "7":
 	cekhasil()
     elif asw == "8":
-        cekopsi()
+        igg()
     elif asw == "9":
  	laporbug()
     elif asw == "10":
