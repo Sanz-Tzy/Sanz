@@ -317,7 +317,7 @@ def fbbaru():
 	print(" ╠══[+] total id  : %s%s%s"%(M,len(id),N))
 ### CEK DATA² TARGET ###
 def igg():
-    jalan(' ╠══[*] maaf fitur ini tidak tersedia sekarang\n [*] silahkan tunggu update terbaru')
+    jalan(' ╠══[*] maaf fitur ini tidak tersedia sekarang\n ╠══[*] silahkan tunggu update terbaru')
     print('%s \x1b[1;92m║'%(O))
     raw_input(' ╠══[*] kembali ')
     menu()
