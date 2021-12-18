@@ -17,7 +17,7 @@
 2. MBasic + (slow)
 3. Mobile + (super slow)
 >
-★ Menu Dump ★
+★ Menu Crack ★
 >
 1. Crack ID Dari Teman/Public
 2. Crack ID Dari Folowers
