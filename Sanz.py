@@ -336,6 +336,13 @@ def info_tools():
     print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] Peringatan \x1b[1;93m: Jangan lupa Follow dan Like github saya!'%(N,H,N);time.sleep(0.07)
     print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] Catatan  \x1b[1;93m: Kunjungi Facebook Saya Bintang Tzy'%(N,H,N);time.sleep(0.07)
     print ' %s╠══[%s#%s]'%(N,O,N), 52 * '\x1b[1;92m-\x1b[0m';time.sleep(0.07)
+    print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] Tutorial buka akun sesi  \x1b[1;93m: '%(N,H,N);time.sleep(0.07)
+    print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] \x1b[1;93m: Buka akun terkena sesi'%(N,H,N);time.sleep(0.07)
+    print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] \x1b[1;93m: lalu liat jenis sesi tersebut jika sesi tersebut ia lah komputer lain'%(N,H,N);time.sleep(0.07)
+    print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] \x1b[1;93m: terus ketik lanjut 5-7 kli menggunakan SIM satu'%(N,H,N);time.sleep(0.07)
+    print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] \x1b[1;93m: lalu keluar dan ubah ke sim kedua'%(N,H,N);time.sleep(0.07)
+    print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] \x1b[1;93m: lalu mainkan mode pesawat 5-10 detik lalu masuk ke akun kesesi tersebut'%(N,H,N);time.sleep(0.07)
+    print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] \x1b[1;93m: lihat lah perubahan tersebut'%(N,H,N);time.sleep(0.07)
     print('%s \x1b[1;92m║'%(O))
     raw_input('  ╠══[ %sKEMBALI%s ] '%(O,N));menu()
 
