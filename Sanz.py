@@ -354,7 +354,7 @@ def info_tools():
     print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] \x1b[1;93m: aang Ardiansyah XD'%(N,H,N);time.sleep(0.07)
     print ' %s\x1b[1;92m╠══[%s>%s\x1b[1;92m] \x1b[1;93m: Yumee Tzy'%(N,H,N);time.sleep(0.07)
     print('%s \x1b[1;92m║'%(O))
-    raw_input('  ╠══[ %sKEMBALI%s ] '%(O,N));menu()
+    raw_input(' ╠══[ %sKEMBALI%s ] '%(O,N));menu()
 
 ### CEK HASIL CRACK ###
 def cekhasil():
