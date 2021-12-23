@@ -254,6 +254,7 @@ def igg():
 	print '\n%s [%s*%s] akun %sOK%s tersimpan di >%s hack.txt'%(P,K,P,H,P,H);jeda(0.2)
 	print '%s [%s*%s] akun %sCP %stersimpan di > %s sesi.txt\n'%(P,K,P,K,P,K);jeda(0.2)
 	with ThreadPoolExecutor(max_workers=30) as log:
+
 ### DUMP MASSAL ###
 def massal():
 	global token
